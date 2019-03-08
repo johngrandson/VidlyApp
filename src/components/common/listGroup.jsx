@@ -13,9 +13,13 @@ const ListGroup = ({ items, textProperty, valueProperty, onItemSelect, selectedI
                     }
                 >
                     {item[textProperty]}
-                    <span className="badge badge-secondary">
-                        {allMovies.filter(m => m.genre.name === item.name).length}
-                    </span>
+                    {item[textProperty] !== 'All Genres'
+                        ? <span className="badge badge-secondary">
+                            {allMovies.filter(m => m.genre.name === item.name).length}
+                        </span>
+                        : <span className="badge badge-secondary">
+                            {allMovies.length}
+                        </span>}
                 </li>
             )}
         </ul>

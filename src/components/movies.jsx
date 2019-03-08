@@ -17,7 +17,7 @@ export default class Movies extends Component {
     };
 
     componentDidMount() {
-        const genres = [{ _id: '', name: 'All Genres' }, ...getGenres()];
+        const genres = [{ _id: '', name: 'All Genres', qty: getMovies().length }, ...getGenres()];
 
         this.setState({ movies: getMovies(), genres })
     }
@@ -82,7 +82,6 @@ export default class Movies extends Component {
                     />
                 </div>
                 <div className="col">
-                    <p>Showing {totalCount} movies in the database.</p>
                     <MoviesTable
                         movies={movies}
                         sortColumn={sortColumn}
