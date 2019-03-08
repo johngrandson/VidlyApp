@@ -75,8 +75,10 @@ export default class Movies extends Component {
                 <div className="col-2">
                     <ListGroup
                         items={this.state.genres}
+                        allMovies={this.state.movies}
                         selectedItem={this.state.selectedGenre}
                         onItemSelect={this.handleGenreSelect}
+                        sortByGenre={this.sortByGenre}
                     />
                 </div>
                 <div className="col">

@@ -11,6 +11,15 @@ const movies = [
     liked: false
   },
   {
+    _id: "5b21ca3eeb7f6fbccd321815",
+    title: "MI2",
+    genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
+    numberInStock: 2,
+    dailyRentalRate: 2.5,
+    publishDate: "2018-01-03T19:04:28.809Z",
+    liked: false
+  },
+  {
     _id: "5b21ca3eeb7f6fbccd471816",
     title: "Die Hard",
     genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
